@@ -1,3 +1,5 @@
+#pragma once
+
 #include <cstring>
 #include <cstdlib>
 #include <iostream>
@@ -5,14 +7,16 @@
 
 using namespace std;
 
+//I'm a player, I'm a player - Tech N9ne
 class Player
 {
 public:
 	Player( int, Role );	// constructor
 	Player(int);
 	int get_id();
-	string get_role();
+	Role get_role();
 	bool get_team();
+	int switch_team();
 
 private:
 	int id;

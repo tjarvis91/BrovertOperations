@@ -3,6 +3,8 @@
 enum Role
 {
 	Assassin,
+	Lancelot_B2G,
+	Lancelot_G2B,
 	Merlin,
 	Minion,
 	Mordred,
