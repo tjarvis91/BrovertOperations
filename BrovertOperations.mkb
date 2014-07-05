@@ -8,4 +8,6 @@ subprojects
 files
 {
 	main.cpp
+	game.cpp
+	game.h
 }
