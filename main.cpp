@@ -1,4 +1,5 @@
 # include "Iw2D.h"
+#include "game.h"
 
 int main()
 {
