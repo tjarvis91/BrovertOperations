@@ -39,7 +39,7 @@ int main()
 	while( !s3eDeviceCheckQuitRequest() )
 	{
 		// Clear the drawing surface
-		Iw2DSurfaceClear( 0xff000000 );
+		Iw2DSurfaceClear( 0xff0000ff );
 
 		// Show the drawing surface
 		Iw2DSurfaceShow();

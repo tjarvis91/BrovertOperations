@@ -10,4 +10,6 @@ files
 	main.cpp
 	game.cpp
 	game.h
+	player.cpp
+	player.h
 }

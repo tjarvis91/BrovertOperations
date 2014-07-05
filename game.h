@@ -19,3 +19,16 @@ public:
 private:
 	bool is_server;		// Is this game instance a server?
 };
+
+enum Role
+{
+	Assassin,
+	Merlin,
+	Minion,
+	Mordred,
+	Morgana,
+	Oberon,
+	Observer,
+	Percival,
+	Servant
+};
