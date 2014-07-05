@@ -1,7 +1,9 @@
 # include "Iw2D.h"
+#include "game.h"
 
 int main()
 {
+	static const int arr[] = { 1, 3, 4};
 	// Initialise the 2D graphics system
 	Iw2DInit();
 
@@ -19,20 +21,21 @@ int main()
 	game.start();
 
 	// Get players
-	Player players[ 5 ];
+	vector<Player> players;
 	for( int i=0; i<5; i++ )
 	{
-		players[ i ] = game.get_player( i );
+		Player new_dud(i);
+		players.push_back(game.get_player( i ));
 	}
 
 	// Make selection
 	int crown_player_id = game.get_crown();
-	game.make_selection( crown_player_id, new vector( 1, 3, 4 ) );
+	game.make_selection(crown_player_id, new vector<int>(arr, arr + sizeof(arr) / sizeof(arr[0])));
 
 	// Make votes
 	for( int i=0; i<5; i++ )
 	{
-		game.add_selection_vote( players[ i ].id, true );
+		game.add_selection_vote( players[ i ].get_id(), true );
 	}
 
 	// Main loop

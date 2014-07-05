@@ -1,8 +1,7 @@
 #include <cstring>
 #include <cstdlib>
 #include <iostream>
-
-#include "game.h"
+#include "types.h"
 
 using namespace std;
 
@@ -10,6 +9,7 @@ class Player
 {
 public:
 	Player( int, Role );	// constructor
+	Player(int);
 	int get_id();
 	string get_role();
 	bool get_team();
