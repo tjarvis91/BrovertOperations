@@ -25,11 +25,6 @@ Player::Player( int id, Role role )
 	}
 }
 
-int Player::get_id()
-{
-	return this->id;
-}
-
 Role Player::get_role()
 {
 	return this->role;
