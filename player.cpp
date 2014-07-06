@@ -48,6 +48,6 @@ bool Player::get_team()
 
 int Player::switch_team()
 {
-	this->role == Lancelot_B2G || this->role == Lancelot_G2B ? this->team = ( this->team + 1 ) % 2 : printf( "The Rock says, the Rock says know your damn role" );
+	return this->role == Lancelot_B2G || this->role == Lancelot_G2B ? this->team = ( this->team + 1 ) % 2 : printf( "The Rock says, the Rock says know your damn role" );
 
 }
