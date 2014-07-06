@@ -7,21 +7,27 @@
 
 using namespace std;
 
+enum Team
+{
+	BAD_GUYS = 0,
+	GOOD_GUYS
+};
+
 //I'm a player, I'm a player - Tech N9ne
 class Player
 {
 public:
 	Player( int, Role );	// constructor
-	Player(int);
+	Player( int );
+	~Player();
 	int get_id();
 	Role get_role();
-	bool get_team();
-	int switch_team();
+	Team get_team();
+	bool switch_team();
 
 private:
 	int id;
 	Role role;
-	bool team;				// 1 for good guys, 0 for bad guys
+	Team team;				// 1 for good guys, 0 for bad guys
 	int status;				// placeholder for that some enum will probably go to eventually
-
-};
+ };

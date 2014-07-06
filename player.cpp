@@ -3,10 +3,10 @@
 Player::Player( int id, Role role )
 {
 	// Set id
-	this->id	= id;
+	this->id = id;
 
 	// Set role
-	this->role	= role;
+	this->role = role;
 
 	// Set team based on role
 	switch ( role )
@@ -16,13 +16,22 @@ Player::Player( int id, Role role )
 	case Minion:
 	case Mordred:
 	case Morgana:
-		this->team = 0;
+		this->team = BAD_GUYS;
+		break;
 	case Lancelot_G2B:
 	case Merlin:
 	case Percival:
 	case Servant:
-		this->team = 1;
+		this->team = GOOD_GUYS;
+		break;
+	default:
+		cout << "HIT A DEFAULT CASE ERROR ERROR STAHP!";
 	}
+}
+
+Player::~Player()
+{
+
 }
 
 Role Player::get_role()
@@ -41,13 +50,28 @@ int Player::get_id()
 	return this->id;
 }
 
-bool Player::get_team()
+Team Player::get_team()
 {
-	return this->role;
+	return this->team;
 }
 
-int Player::switch_team()
+bool Player::switch_team()
 {
-	return this->role == Lancelot_B2G || this->role == Lancelot_G2B ? this->team = ( this->team + 1 ) % 2 : printf( "The Rock says, the Rock says know your damn role" );
+	bool ret = true;
 
+	if( this->role == Lancelot_B2G )
+	{
+		this->team = GOOD_GUYS;
+	}
+	else if( this->role == Lancelot_G2B )
+	{
+		this->team = BAD_GUYS;
+	}
+	else
+	{
+		cout << "WTF ARE YOU DOING STAHP! ERROR ERROR DANGER WILL ROBINSON!";
+		ret = false;
+	}
+
+	return( ret );
 }
