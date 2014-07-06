@@ -24,7 +24,6 @@ int main()
 	vector<Player> players;
 	for( int i=0; i<5; i++ )
 	{
-		Player new_dud(i);
 		players.push_back(game.get_player( i ));
 	}
 
