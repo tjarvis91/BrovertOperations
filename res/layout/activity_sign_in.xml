@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_centerInParent="true" 
+        style="?android:attr/buttonBarStyle" >
+        
+        <EditText
+            android:id="@+id/text_edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:hint="@string/enter_email"
+            android:inputType="textEmailAddress" />
+    
+	    <EditText android:id="@+id/text_edit_password"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:inputType="textPassword"
+	        android:hint="@string/password" />
+	    
+	    <LinearLayout android:id="@+id/buttons"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:orientation="horizontal" >
+	        
+	        <Button
+	            android:id="@+id/button_sign_in"
+	            style="?android:attr/buttonBarButtonStyle"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:text="@string/sign_in" 
+	            android:onClick="signIn" />
+	        
+	        <Button
+	            android:id="@+id/button_sign_up"
+	            style="?android:attr/buttonBarButtonStyle"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:text="@string/sign_up" />
+	        
+	    </LinearLayout>
+        
+    </LinearLayout>
+    
+</RelativeLayout>
