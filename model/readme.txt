@@ -1,0 +1,1 @@
+This is an unfinished java implementation of the game model. I need to integrate this into Nick's android app.
